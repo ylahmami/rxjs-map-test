@@ -26,7 +26,7 @@ export class AppComponent {
       console.log(book.titleName);
     };
 
-    var result = this.http
+    this.http
       .get<Book>('https://1wko9.wiremockapi.cloud/nonCase')
       .pipe(
         map((data) => {
@@ -35,7 +35,7 @@ export class AppComponent {
       )
       .subscribe((val) => LogBook(val));
 
-    var result = this.http
+    this.http
       .get<Book>('https://1wko9.wiremockapi.cloud/case')
       .pipe(
         map((data) => {
